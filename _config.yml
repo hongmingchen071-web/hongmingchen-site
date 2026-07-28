@@ -3,6 +3,7 @@ description: 记录动作 Roguelite《帝陵》的开发过程——想法、进
 theme: minima
 url: "https://hongmingchen.tech"
 lang: zh-CN
+timezone: Asia/Shanghai
 show_excerpts: true
 
 minima:
