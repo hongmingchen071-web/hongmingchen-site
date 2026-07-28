@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'zh-CN' }}">
+
+  {%- include head.html -%}
+
+  <body class="layout-{{ page.layout | default: 'page' }}">
+
+    <a class="skip-link" href="#main">跳到正文</a>
+
+    {%- include header.html -%}
+
+    <main class="page-content" id="main">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {%- include footer.html -%}
+
+    <script>
+      // 把带 alt 的独立配图升级成 figure + 图注
+      (function () {
+        var imgs = document.querySelectorAll(".post-content p > img[alt]");
+        for (var i = 0; i < imgs.length; i++) {
+          var img = imgs[i];
+          var p = img.parentNode;
+          if (!img.alt || p.childNodes.length !== 1) { continue; }
+          var fig = document.createElement("figure");
+          fig.className = "post-figure";
+          var cap = document.createElement("figcaption");
+          cap.textContent = img.alt;
+          p.parentNode.replaceChild(fig, p);
+          fig.appendChild(img);
+          fig.appendChild(cap);
+        }
+      })();
+    </script>
+
+  </body>
+
+</html>

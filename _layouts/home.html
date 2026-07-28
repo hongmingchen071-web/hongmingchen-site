@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <section class="hero">
+    <p class="hero__kicker">灰盒原型 · 开发中</p>
+    <h1 class="hero__title">《帝陵》</h1>
+    <p class="hero__line">一支盗墓队深入千年帝陵，尽可能多带出值钱的东西，并且活着回来。</p>
+    <div class="hero__intro">
+      {{ content }}
+    </div>
+  </section>
+
+  {%- if site.posts.size > 0 -%}
+  <section class="journal">
+    <h2 class="section-title">{{ page.list_title | default: "开发日志" }}</h2>
+
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      {%- assign excerpt_text = post.excerpt | strip_html | strip_newlines | strip -%}
+      <li class="post-item">
+        <a class="post-item__link" href="{{ post.url | relative_url }}">
+          <time class="post-item__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+          <h3 class="post-item__title">{{ post.title | escape }}</h3>
+          {%- if site.show_excerpts and excerpt_text != "" %}
+          <p class="post-item__excerpt">{{ excerpt_text | truncate: 90 }}</p>
+          {%- endif %}
+          <span class="post-item__more">读这篇 →</span>
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+  {%- endif -%}
+
+</div>

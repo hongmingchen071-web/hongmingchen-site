@@ -1,5 +1,13 @@
-title: hongmingchen的游戏开发日志
-description: 记录游戏开发过程中的想法、进度和踩坑
+title: hongmingchen 的游戏开发日志
+description: 记录动作 Roguelite《帝陵》的开发过程——想法、进度和踩过的坑
 theme: minima
 url: "https://hongmingchen.tech"
+lang: zh-CN
 show_excerpts: true
+
+minima:
+  date_format: "%Y 年 %-m 月 %-d 日"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag

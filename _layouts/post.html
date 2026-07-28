@@ -1,0 +1,39 @@
+---
+layout: default
+---
+{%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
+
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: date_format }}</time>
+    </p>
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {%- if page.previous or page.next -%}
+  <nav class="post-nav">
+    {%- if page.previous %}
+    <a class="post-nav__link post-nav__link--prev" href="{{ page.previous.url | relative_url }}">
+      <span class="post-nav__label">← 更早的日志</span>
+      <span class="post-nav__title">{{ page.previous.title | escape }}</span>
+    </a>
+    {%- endif %}
+    {%- if page.next %}
+    <a class="post-nav__link post-nav__link--next" href="{{ page.next.url | relative_url }}">
+      <span class="post-nav__label">更新的日志 →</span>
+      <span class="post-nav__title">{{ page.next.title | escape }}</span>
+    </a>
+    {%- endif %}
+  </nav>
+  {%- endif -%}
+
+  <p class="post-back"><a href="{{ "/" | relative_url }}">返回全部日志</a></p>
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>
