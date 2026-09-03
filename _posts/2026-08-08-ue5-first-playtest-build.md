@@ -2,6 +2,7 @@
 layout: post
 title: "UE5 版的第一个外测包"
 date: 2026-08-08 15:47:19 +0800
+project: diling
 ---
 
 原型搬进 UE5 之后的第一个外测包做出来了，已经发给测试者。

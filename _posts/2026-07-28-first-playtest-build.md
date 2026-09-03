@@ -2,6 +2,7 @@
 layout: post
 title: "第一份外测包，和一次 8510 铢的贪心"
 date: 2026-07-28 09:57:31 +0800
+project: diling
 image: /assets/images/2026-07-27-jiesuan-8510.png
 ---
 

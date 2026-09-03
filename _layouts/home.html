@@ -5,16 +5,52 @@ layout: default
 <div class="home">
 
   <section class="hero">
-    <p class="hero__kicker">灰盒原型 · 开发中</p>
-    <h1 class="hero__title">《帝陵》</h1>
-    <p class="hero__line">一支盗墓队深入千年帝陵，尽可能多带出值钱的东西，并且活着回来。</p>
-    <div class="hero__intro">
-      {{ content }}
+    <p class="hero__kicker">第一人称潜行 · 可玩原型 · 开发中</p>
+    <h1 class="hero__title">《活墓》</h1>
+    <p class="hero__sub">HUOMU · working title</p>
+    <p class="hero__line">一个人下墓。水位会变，声音会传，你动过的地方不会复原。</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="{{ "/huomu/" | relative_url }}">项目介绍</a>
+      <a class="btn" href="{{ "/huomu/en/" | relative_url }}">English</a>
     </div>
   </section>
 
+  <div class="gallery-strip">
+    <figure>
+      <img src="{{ "/assets/images/huomu/waterfall.jpg" | relative_url }}" alt="水从顶上灌进墓室" loading="lazy">
+      <figcaption>水从顶上灌进墓室</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ "/assets/images/huomu/breach.jpg" | relative_url }}" alt="凿开渠帮，水位开始下降" loading="lazy">
+      <figcaption>凿开渠帮，水位开始下降</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ "/assets/images/huomu/guard.jpg" | relative_url }}" alt="探头张望，守卫正从眼前走过" loading="lazy">
+      <figcaption>探头张望，守卫正走过</figcaption>
+    </figure>
+    <figure>
+      <img src="{{ "/assets/images/huomu/market.jpg" | relative_url }}" alt="出墓之后的黑市结算面板" loading="lazy">
+      <figcaption>出墓之后的黑市</figcaption>
+    </figure>
+  </div>
+
+  <section class="home-intro">
+    {{ content }}
+  </section>
+
+  <section class="playable">
+    <h2 class="section-title">现在能玩到什么</h2>
+    <ul class="playable__list">
+      <li>一个完整的墓室：下墓、找东西、出墓卖货，再下去一趟。</li>
+      <li>凿开渠帮放水，水一退，托着棺盖的浮力没了，守卫醒过来。</li>
+      <li>满水的时候可以潜下去捞水底的东西，有憋气倒计时。</li>
+      <li>背得越重，脚步声传得越远，守卫循声来查；扔块碎石可以把它引开。</li>
+      <li>凿开的渠、拿走的东西、扔在地上的石头，下一趟全都还在原地。</li>
+    </ul>
+  </section>
+
   {%- if site.posts.size > 0 -%}
-  <section class="journal">
+  <section class="journal" id="journal">
     <h2 class="section-title">{{ page.list_title | default: "开发日志" }}</h2>
 
     <ul class="post-list">
@@ -22,7 +58,14 @@ layout: default
       {%- assign excerpt_text = post.excerpt | strip_html | strip_newlines | strip -%}
       <li class="post-item">
         <a class="post-item__link" href="{{ post.url | relative_url }}">
-          <time class="post-item__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+          <span class="post-item__meta">
+            <time class="post-item__date" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+            {%- if post.project == "huomu" %}
+            <span class="post-item__tag post-item__tag--huomu">活墓</span>
+            {%- elsif post.project == "diling" %}
+            <span class="post-item__tag">帝陵</span>
+            {%- endif %}
+          </span>
           <h3 class="post-item__title">{{ post.title | escape }}</h3>
           {%- if site.show_excerpts and excerpt_text != "" %}
           <p class="post-item__excerpt">{{ excerpt_text | truncate: 90 }}</p>
@@ -34,5 +77,25 @@ layout: default
     </ul>
   </section>
   {%- endif -%}
+
+  <section class="archive" id="archive">
+    <h2 class="section-title">过往项目</h2>
+    <details class="archive__box">
+      <summary class="archive__summary">《帝陵》· 动作 Roguelite · 2026 年 7 月 – 8 月 · 已封存</summary>
+      <div class="archive__body">
+        <p>一支盗墓队深入千年帝陵，尽可能多带出值钱的东西，并且活着回来。做到 UE5 灰盒，发过一版外测包，八月封存。里面关于负重、声音和取舍的一些想法，接着用在了《活墓》上。</p>
+        <ul class="archive__posts">
+          {%- for post in site.posts -%}
+          {%- if post.project == "diling" %}
+          <li>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+            <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+          </li>
+          {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </div>
+    </details>
+  </section>
 
 </div>
