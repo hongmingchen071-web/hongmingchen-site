@@ -9,7 +9,11 @@ image: /assets/images/huomu/og.jpg
 
 一个第一人称潜行盗墓的原型：一个人下到墓里，摸走值钱的东西，再活着爬出来。Unreal Engine 5.8，C++，我一个人做，2026 年 8 月中开始。《活墓》是暂名。
 
-![下到墓里，打开手电](/assets/images/huomu/descent.jpg)
+<video controls preload="metadata" playsinline poster="/assets/video/poster.jpg" style="width:100%;display:block;margin:1.2rem 0;border-radius:6px;background:#000">
+  <source src="/assets/video/huomu-prototype-2026-09-zh.mp4" type="video/mp4">
+</video>
+
+实机录像，1 分 25 秒，2026 年 9 月。
 
 ## 一趟是这样的
 

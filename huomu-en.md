@@ -12,7 +12,11 @@ A first-person stealth tomb-robbing prototype: you go down alone, take what's wo
 
 The game is in Chinese for now, so the captions below say what you're looking at.
 
-![Down in the tomb, torch on](/assets/images/huomu/descent.jpg)
+<video controls preload="metadata" playsinline poster="/assets/video/poster.jpg" style="width:100%;display:block;margin:1.2rem 0;border-radius:6px;background:#000">
+  <source src="/assets/video/huomu-prototype-2026-09-en.mp4" type="video/mp4">
+</video>
+
+Gameplay capture, 1 min 25 s, September 2026.
 
 ## The loop
 
