@@ -8,7 +8,7 @@ image: /assets/images/huomu/og.jpg
 
 <p class="lang-switch"><a href="/huomu/">中文</a></p>
 
-A first-person stealth tomb-robbing prototype: you go down alone, take what's worth money, and climb back out. Unreal Engine 5.8, C++, made by one person, started mid-August 2026. HUOMU is the pinyin of the Chinese title — both are working titles.
+A first-person stealth tomb-robbing prototype: you go down alone, take what's worth money, and climb back out. Unreal Engine 5.8, C++, made by one person, started mid-August 2026. HUOMU is a working title.
 
 The game is in Chinese for now, so the captions below say what you're looking at.
 
@@ -26,15 +26,15 @@ Parts of the tomb hold mercury vapour, light or heavy; a gas mask with a filter 
 
 There is a pool in the middle of the chamber. Chisel through the channel wall and the water pours into the level below and leaves through a grate at the bottom. As the water drops, the buoyancy holding up the three coffin lids goes with it. The lids come loose one by one, and the guards inside wake up.
 
-So draining is a decision. While the pool is full you can dive for what is lying on the bottom, on a breath timer. Once it is drained you can reach the way down — and the guards are out.
+So draining is a decision. While the pool is full you can dive for what is lying on the bottom, though you can only hold your breath so long. Once it is drained you can reach the way down, and the guards are out.
 
-![The third chisel hit opens the channel wall. The text reads "channel 3/3 — water level dropping"](/assets/images/huomu/breach.jpg)
+![The third chisel hit opens the channel wall. The text reads "channel 3/3, water level dropping"](/assets/images/huomu/breach.jpg)
 
 ![Water pouring into the chamber from above](/assets/images/huomu/waterfall.jpg)
 
 ## Weight and hearing
 
-Two numbers sit in the top-left corner: how many kilograms you are carrying, and how far away a guard can hear the noise you are making right now. The heavier you are, the further your footsteps carry. Sprinting carries further. Landing from a height makes noise too, and the bigger the drop the louder it is.
+Two numbers stay in the top-left corner: how many kilograms you are carrying, and how far your noise carries right now, in metres. The heavier you are, the further your footsteps carry. Sprinting carries further. Landing from a height makes noise too, and the bigger the drop the louder it is.
 
 Guards run on hearing alone. Which is why throwing a stone somewhere else pulls one away.
 
@@ -44,7 +44,7 @@ Guards run on hearing alone. Which is why throwing a stone somewhere else pulls 
 
 ## No take-backs
 
-The channel you broke, the water you drained, the things you took, the stone you dropped on the floor — all of it is still where you left it on the next trip. Nothing resets. A one-time change stays a one-time change.
+The channel you broke, the water you drained, the things you took, the stone you dropped on the floor: all of it is still where you left it on the next trip. Nothing resets. A one-time change stays a one-time change.
 
 The bronze sword makes that explicit. Picking it up opens a confirmation box first: take it, and guard hearing goes up 50%, permanently. Press yes and it goes into the save file.
 
@@ -52,11 +52,11 @@ The bronze sword makes that explicit. Picking it up opens a confirmation box fir
 
 ## Where it is now
 
-One chamber, playable end to end: go down, drain the pool, get chased, climb out, sell, go down again. The art is whitebox geometry plus AI-generated placeholder models — that is the actual state of it, undressed.
+One chamber, playable end to end: go down, drain the pool, get chased, climb out, sell, go down again.
 
 ## Next
 
-More space beyond this chamber first, then replacing the placeholder models. Once it is worth playing, I will put a build out.
+Most of my time, seven parts in ten or more, goes into the game itself. The hearing and weight system is what I keep working on: the first and second spaces will get ground materials, so the same load sounds different on rock, soil and standing water. The rest goes into development videos.
 
 ## Contact
 
