@@ -34,9 +34,9 @@ So draining is a decision. While the pool is full you can dive for what is lying
 
 ## Weight and hearing
 
-Two numbers stay in the top-left corner: how many kilograms you are carrying, and how far your noise carries right now, in metres. The heavier you are, the further your footsteps carry. Sprinting carries further. Landing from a height makes noise too, and the bigger the drop the louder it is.
+Two numbers stay in the top-left corner: how many kilograms you are carrying, and how far away a guard can be and still hear you, in metres. The heavier you are, the further your footsteps carry. Sprinting carries further. Landing from a height makes noise too, and the bigger the drop the louder it is.
 
-Guards run on hearing alone. Which is why throwing a stone somewhere else pulls one away.
+Hearing runs both ways. A guard's footsteps fade with distance by the same rule as yours, so if you can clearly hear one walking, you are already inside its hunting range. Guards find you by sound only, which is why throwing a stone somewhere else pulls one away.
 
 ![Top-left: 17.5 kg, and "heard within 25 m". The word at the bottom is "sprinting"](/assets/images/huomu/weight-hud.jpg)
 
@@ -44,7 +44,7 @@ Guards run on hearing alone. Which is why throwing a stone somewhere else pulls 
 
 ## No take-backs
 
-The channel you broke, the water you drained, the things you took, the stone you dropped on the floor: all of it is still where you left it on the next trip. Nothing resets. A one-time change stays a one-time change.
+The channel you broke, the water you drained, the things you took, the stone you dropped on the floor: all of it is still where you left it on the next trip. Nothing resets. What you change stays changed.
 
 The bronze sword makes that explicit. Picking it up opens a confirmation box first: take it, and guard hearing goes up 50%, permanently. Press yes and it goes into the save file.
 
@@ -56,7 +56,7 @@ One chamber, playable end to end: go down, drain the pool, get chased, climb out
 
 ## Next
 
-Most of my time, seven parts in ten or more, goes into the game itself. The hearing and weight system is what I keep working on: the first and second spaces will get ground materials, so the same load sounds different on rock, soil and standing water. The rest goes into development videos.
+At least seven tenths of my time goes into the game itself. The hearing and weight system is what I keep working on: the first and second spaces will get ground materials, so the same load sounds different on rock, soil and standing water. The rest goes into development videos.
 
 ## Contact
 
